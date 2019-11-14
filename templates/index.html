@@ -1,0 +1,51 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+<!--    <title>Document</title>-->
+<!--</head>-->
+<!--<body>-->
+    
+<!--    <h1>Helooooooooo</h1>-->
+<!--    <p>Welcome to Flask site</p>-->
+    
+<!--    <hr />-->
+    
+<!--    {% for messages in data%}-->
+<!--    <p>{{messages}}</p>-->
+<!--    {% endfor %}-->
+<!--    <hr />-->
+<!--    <form method="POST" action="/add">-->
+<!--        <input type="text" name="msg" placeholder="whats happening"/>-->
+<!--        <input type="submit" value="Send"  />-->
+<!--    </form>-->
+    
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        {% for msgs in mylist %}
+        <!--<p>{{msgs}}</p>-->
+        <p class="message"><em>{{msgs.author}}</em>: {{msgs.text}}</p>
+        {% endfor %}
+        
+    </div>
+    
+    <form method="POST" action="/">
+        <input type="text" name="inputmsg"/>
+        <input type="submit" value="Submit"/>
+    </form>
+</body>
+</html>
